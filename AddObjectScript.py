@@ -14,7 +14,12 @@ class TestPanel(bpy.types.Panel):
         layout = self.layout
         row = layout.row()
         row.label(text="Add an object", icon='CUBE')
-        row.operator("mesh.primitive_cube_add")
+        row.operator("mesh.primitive_cube_add", icon='CUBE')
+        row = layout.row()
+        row.label(text="Add an object", icon='SPHERE')
+        row.operator("mesh.primitive_uv_sphere_add", icon='SPHERE')
+        row = layout.row()
+        row.operator("object.text_add")
         
         
 
